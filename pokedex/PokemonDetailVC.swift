@@ -23,6 +23,14 @@ class PokemonDetailVC: UIViewController {
     @IBOutlet weak var nextEvoImg: UIImageView!
     @IBOutlet weak var evoLbl: UILabel!
     
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var bioMove1Lbl: UILabel!
+    @IBOutlet weak var bioMove2Lbl: UILabel!
+    @IBOutlet weak var bioMove3Lbl: UILabel!
+    @IBOutlet weak var bioMove4Lbl: UILabel!
+    @IBOutlet weak var bioMove5Lbl: UILabel!
+    @IBOutlet weak var bioMove6Lbl: UILabel!
+    
     
     var pokemon: Pokemon!
 
@@ -47,6 +55,12 @@ class PokemonDetailVC: UIViewController {
         pokedexLbl.text = "\(pokemon.pokedexId)"
         weightLbl.text = pokemon.weight
         attackLbl.text = pokemon.attack
+        bioMove1Lbl.text = "Type:"
+        bioMove2Lbl.text = "Height:"
+        bioMove3Lbl.text = "Weight:"
+        bioMove4Lbl.text = "Attack:"
+        bioMove5Lbl.text = "Pokedex ID"
+        bioMove6Lbl.text = "Defense"
         if pokemon.nextEvolutionId == "" {
             evoLbl.text = "No Evolutions"
             nextEvoImg.hidden = true
@@ -57,11 +71,61 @@ class PokemonDetailVC: UIViewController {
             
             if pokemon.nextEvolutionLvl != "" {
                 str += " - LVL \(pokemon.nextEvolutionLvl)"
+                
+                evoLbl.text = str
             }
         }
     }
 
     @IBAction func backBtnPressed(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    @IBAction func segmentedControlTab(sender: AnyObject) {
+        if segmentedControl.selectedSegmentIndex == 0 {
+            updateUI()
+            bioMove3Lbl.hidden = false
+            bioMove6Lbl.hidden = false
+            weightLbl.hidden = false
+            defenseLbl.hidden = false
+        }
+        
+        if segmentedControl.selectedSegmentIndex == 1 {
+            
+            if pokemon.moves.count > 1 {
+                
+                print("Has Moves")
+                
+                bioMove1Lbl.text = "Move 1"
+                bioMove2Lbl.text = "Move 2"
+                bioMove3Lbl.hidden = true
+                bioMove4Lbl.text = "Move 4"
+                bioMove5Lbl.text = "Move 5"
+                bioMove6Lbl.hidden = true
+                typeLbl.text = pokemon.moves[0]
+                heightLbl.text = pokemon.moves[1]
+                weightLbl.hidden = true
+                attackLbl.text = pokemon.moves[3]
+                pokedexLbl.text = pokemon.moves[4]
+                defenseLbl.hidden = true
+                
+            } else {
+                
+                print("No Moves")
+                
+                bioMove1Lbl.hidden = true
+                bioMove2Lbl.hidden = true
+                bioMove3Lbl.hidden = true
+                bioMove4Lbl.hidden = true
+                bioMove5Lbl.hidden = true
+                bioMove6Lbl.hidden = true
+                typeLbl.hidden = true
+                heightLbl.hidden = true
+                weightLbl.hidden = true
+                attackLbl.hidden = true
+                pokedexLbl.hidden = true
+                defenseLbl.hidden = true
+            }
+
+        }
     }
 }

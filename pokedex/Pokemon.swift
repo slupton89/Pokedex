@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+
 class Pokemon {
     private var _name: String!
     private var _pokedexId: Int!
@@ -22,6 +23,9 @@ class Pokemon {
     private var _nextEvolutionId: String!
     private var _nextEvolutionLvl: String!
     private var _pokemonUrl: String!
+    private var _moves: [String]!
+    
+    
     
     var name: String {
         if _name == nil {
@@ -97,6 +101,13 @@ class Pokemon {
         return _nextEvolutionLvl
     }
     
+    var moves: [String] {
+        if _moves.count == 0 {
+            _moves = ["No Moves"]
+        }
+        return _moves
+}
+    
     init(name: String, pokedexId: Int) {
         self._name = name
         self._pokedexId = pokedexId
@@ -126,6 +137,26 @@ class Pokemon {
                 
                 if let defense = dict["defense"] as? Int {
                     self._defense = "\(defense)"
+                }
+                
+                if let moveNames = dict["moves"] as? [Dictionary<String, AnyObject>] where moveNames.count > 0 {
+                    
+                    if let name = moveNames[0]["name"] {
+                        self._moves = [name as! String]
+                    }
+                    
+                    if moveNames.count > 1 {
+                        
+                        for var x = 1; x < moveNames.count; x++ {
+                            if let name = moveNames[x]["name"] {
+                                self._moves.append(name as! String)
+                                print(self._moves)
+                            }
+                        }
+                    }
+                } else {
+                    self._moves = [""]
+                    print(self._moves)
                 }
                 
                 if let types = dict["types"] as? [Dictionary<String, String>] where types.count > 0 {
