@@ -31,7 +31,6 @@ class PokemonDetailVC: UIViewController {
     @IBOutlet weak var bioMove5Lbl: UILabel!
     @IBOutlet weak var bioMove6Lbl: UILabel!
     
-    
     var pokemon: Pokemon!
 
     override func viewDidLoad() {
@@ -40,7 +39,8 @@ class PokemonDetailVC: UIViewController {
         nameLbl.text = pokemon.name.capitalizedString
         let img = UIImage(named: "\(pokemon.pokedexId)")
         mainImg.image = img
-        currentEvoImg.image = img
+        //currentEvoImg.image = img
+        currentEvoImg.hidden = true
         
         pokemon.downloadPokemonDetails { () -> () in
             self.updateUI()

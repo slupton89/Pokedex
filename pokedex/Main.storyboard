@@ -435,27 +435,15 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0w-RV-tJ6">
-                                <rect key="frame" x="250" y="492" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="OiE-ix-Q8R"/>
-                                    <constraint firstAttribute="width" constant="100" id="SWc-E9-gjN"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="P6M-E6-3dn" kind="show" identifier="nextEvoSegue" id="pIF-4G-QU0"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NpN-5K-q7n" firstAttribute="top" secondItem="KXW-7c-HJT" secondAttribute="bottom" constant="20" id="0Mh-SB-rVE"/>
-                            <constraint firstItem="u0w-RV-tJ6" firstAttribute="centerX" secondItem="QZw-r2-GTd" secondAttribute="centerX" id="275-fK-J1h"/>
                             <constraint firstItem="qBW-DC-Uhq" firstAttribute="top" secondItem="UHC-UE-yIY" secondAttribute="bottom" id="Diy-Hg-Kfb"/>
                             <constraint firstItem="K8I-Ru-EY2" firstAttribute="top" secondItem="h9w-Bv-cD6" secondAttribute="bottom" constant="15" id="EPL-yE-7a0"/>
                             <constraint firstItem="h9w-Bv-cD6" firstAttribute="leading" secondItem="QZw-r2-GTd" secondAttribute="leading" id="FL4-PK-So7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NpN-5K-q7n" secondAttribute="trailing" id="G1i-HP-Ce2"/>
                             <constraint firstItem="NpN-5K-q7n" firstAttribute="leading" secondItem="QZw-r2-GTd" secondAttribute="leadingMargin" id="H7Y-hy-2cX"/>
-                            <constraint firstItem="u0w-RV-tJ6" firstAttribute="centerY" secondItem="QZw-r2-GTd" secondAttribute="centerY" id="HtG-Kh-jxZ"/>
                             <constraint firstItem="CNl-1t-k0H" firstAttribute="top" secondItem="K8I-Ru-EY2" secondAttribute="bottom" constant="8" id="O7q-4h-Qtf"/>
                             <constraint firstItem="KXW-7c-HJT" firstAttribute="leading" secondItem="QZw-r2-GTd" secondAttribute="leading" id="QGa-PG-hep"/>
                             <constraint firstItem="K8I-Ru-EY2" firstAttribute="leading" secondItem="QZw-r2-GTd" secondAttribute="leadingMargin" id="URi-dO-5qe"/>
@@ -503,7 +491,4 @@
         <image name="bg" width="1920" height="1200"/>
         <image name="music" width="100" height="100"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="l2S-K4-Llb"/>
-    </inferredMetricsTieBreakers>
 </document>
