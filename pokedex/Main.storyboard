@@ -244,8 +244,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="-15" translatesAutoresizingMaskIntoConstraints="NO" id="1P0-zf-yV0">
                                         <rect key="frame" x="0.0" y="34" width="560" height="206"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="383" translatesAutoresizingMaskIntoConstraints="NO" id="Mai-KI-dRM">
-                                                <rect key="frame" x="0.0" y="0.0" width="560" height="202"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noevo" translatesAutoresizingMaskIntoConstraints="NO" id="Mai-KI-dRM">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="203"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="YwR-GG-kaX"/>
                                                     <constraint firstAttribute="height" constant="100" id="mA6-Pb-UFE"/>
@@ -258,7 +258,7 @@
                                                 </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="jGG-MZ-mPo">
-                                                <rect key="frame" x="0.0" y="187" width="560" height="19"/>
+                                                <rect key="frame" x="0.0" y="188" width="560" height="19"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -426,7 +426,7 @@
                                             <constraint firstAttribute="width" constant="100" id="lAy-mQ-hhf"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="383" translatesAutoresizingMaskIntoConstraints="NO" id="vpt-wx-P7V">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noevo" translatesAutoresizingMaskIntoConstraints="NO" id="vpt-wx-P7V">
                                         <rect key="frame" x="280" y="0.0" width="280" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="6KO-uP-E5b"/>
@@ -490,5 +490,6 @@
         <image name="back" width="100" height="67"/>
         <image name="bg" width="1920" height="1200"/>
         <image name="music" width="100" height="100"/>
+        <image name="noevo" width="120" height="120"/>
     </resources>
 </document>

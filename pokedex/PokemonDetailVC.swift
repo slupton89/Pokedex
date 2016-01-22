@@ -48,6 +48,7 @@ class PokemonDetailVC: UIViewController {
     }
     
     func updateUI() {
+        evoLbl.text = "Couldn't load Evolution from API"
         descriptionLbl.text = pokemon.description
         typeLbl.text = pokemon.type
         defenseLbl.text = pokemon.defense
