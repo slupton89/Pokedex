@@ -25,8 +25,6 @@ class Pokemon {
     private var _pokemonUrl: String!
     private var _moves: [String]!
     
-    
-    
     var name: String {
         if _name == nil {
             _name = ""
@@ -89,7 +87,7 @@ class Pokemon {
     
     var nextEvolutionId: String {
         if _nextEvolutionId == nil {
-            _nextEvolutionId = ""
+            _nextEvolutionId = "noevo"
         }
         return _nextEvolutionId
     }
@@ -122,6 +120,8 @@ class Pokemon {
             let result = response.result
             
             if let dict = result.value as? Dictionary<String, AnyObject> {
+                
+                
                 
                 if let weight = dict["weight"] as? String {
                     self._weight = weight
@@ -209,6 +209,20 @@ class Pokemon {
                     if let to = evolutions[0]["to"] as? String {
                         
                         if to.rangeOfString("mega") == nil {
+                            
+                            if let lvlExist = evolutions[0]["level"] {
+                                
+                                if let lvl = lvlExist as? Int {
+                                    
+                                    self._nextEvolutionLvl = "\(lvl)"
+                                    
+                                }
+                                
+                            } else {
+                                
+                                self._nextEvolutionLvl = ""
+                                
+                            }
                             
                             if let uri = evolutions[0]["resource_uri"] as? String {
                                 

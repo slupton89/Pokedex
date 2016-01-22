@@ -63,7 +63,8 @@ class PokemonDetailVC: UIViewController {
         bioMove6Lbl.text = "Defense"
         if pokemon.nextEvolutionId == "" {
             evoLbl.text = "No Evolutions"
-            nextEvoImg.hidden = true
+            nextEvoImg.hidden = false
+            
         } else {
             nextEvoImg.hidden = false
             nextEvoImg.image = UIImage(named: pokemon.nextEvolutionId)
